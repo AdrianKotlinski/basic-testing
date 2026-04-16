@@ -18,11 +18,15 @@ describe('simpleCalculator tests', () => {
   });
 
   test('should exponentiate two numbers', () => {
-    expect(simpleCalculator({ a: 2, b: 3, action: Action.Exponentiate })).toBe(8);
+    expect(simpleCalculator({ a: 2, b: 3, action: Action.Exponentiate })).toBe(
+      8,
+    );
   });
 
   test('should return null for invalid action', () => {
-    expect(simpleCalculator({ a: 1, b: 2, action: 'Unknown action' })).toBeNull();
+    expect(
+      simpleCalculator({ a: 1, b: 2, action: 'Unknown action' }),
+    ).toBeNull();
   });
 
   test('should return null for invalid arguments', () => {
